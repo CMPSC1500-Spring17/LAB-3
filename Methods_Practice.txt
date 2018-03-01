@@ -1,0 +1,52 @@
+public class Method_Practice {
+
+        public static void main(String[] args)
+        {
+            System.out.println( "the answer is " + Divide(39, 4) );
+        }
+
+        private static int add(int x, int y)
+        {
+            int result = 0;
+            for( int i=0; i < x; i = i + 1)
+                result = result + 1;
+
+            for( int i=1; i <= y; i= i + 1)
+                result = result + 1;
+
+            return result;
+        }
+
+        private static int subtract(int x, int y)
+        {
+            int result = add(x,0);
+
+            for( int i=0; i < y; i = i + 1)
+                result = result - 1;
+
+            return result;
+        }
+
+        private static int multiply(int a, int b)
+        {
+            int result = 0;
+
+            for( int i = 0; i < a; i++ )
+                result = result + b;
+
+            return result;
+        }
+
+        private static int Divide(float c, float d)
+        {
+            float dividend = c;
+            int result = 0;
+
+            while (dividend >= d)
+            {
+                dividend = dividend - d;
+                result = result + 1;
+            }
+            return result;
+        }
+}

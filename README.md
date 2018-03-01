@@ -3,7 +3,7 @@
 ## Instructions
 For this lab, I would like you to take the math.java file from notes, and extend it with additional methods/functions.
 
-When doing this, I would like you to not add or subtract more than 1 at a time on a line.  I would also like you not to use opperators other than + and -, and the methods/functions we have created in this file.
+I would  like you not to use opperators other than + and -, and the methods/functions we have created in this file.
 
 
 Please implement:
