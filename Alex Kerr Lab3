@@ -1,0 +1,73 @@
+    public class Math {
+
+        public static void main(String[] args)
+        {
+            System.out.println( ((5+4)-12) + "  :  " + subtract(add(5,4),12) );
+            System.out.println(multiply(6,4));
+            System.out.println(divide(20,2));
+            System.out.println(mod(21,5));
+            System.out.println(concatination("abcd","efgh"));
+        }
+
+        private static int add(int x, int y)
+        {
+            int result = 0;
+            for( int i=0; i < x; i = i + 1)
+                result = result + 1;
+
+            for( int i=1; i <= y; i= i + 1)
+                result = result + 1;
+
+            return result;
+        }
+
+        private static int subtract(int x, int y)
+        {
+            int result = add(x,0);
+
+            for( int i=0; i < y; i = i + 1)
+                result = result - 1;
+
+            return result;
+        }
+        private static int multiply(int x, int y)
+        {
+            int result = 0;
+            for(int i = 0; i<y;i++)
+                result = result + add(x,0);
+            return result;
+        }
+        private static int divide(int x, int y) {
+            int result = 0;
+            int value = x;
+            while (value >= y)
+             {
+                value = subtract(value, y);
+                result++;
+             }
+            return result;
+        }
+        private static int mod(int x, int y)
+        {
+            int result = x;
+            while (result >= y)
+            {
+                result = subtract(result, y);
+            }
+            return result;
+        }
+        private static String concatination(String x, String y)
+        {
+            String result = "";
+            for(int i =0; i<x.length();i++)
+            {
+                result = result + x.charAt(i);
+            }
+            for(int i = 0; i<y.length(); i++)
+            {
+                result = result + y.charAt(i);
+            }
+            return result;
+        }
+    }
+
